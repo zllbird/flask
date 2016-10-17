@@ -13,6 +13,14 @@ Version 0.12
   ``application/octet-stream``. See pull request ``#1988``.
 - Make ``flask.safe_join`` able to join multiple paths like ``os.path.join``
   (pull request ``#1730``).
+- Revert a behavior change that made the dev server crash instead of returning
+  a Internal Server Error (pull request ``#2006``).
+- Correctly invoke response handlers for both regular request dispatching as
+  well as error handlers.
+- Disable logger propagation by default for the app logger.
+- Add support for range requests in ``send_file``.
+- ``app.test_client`` includes preset default environment, which can now be
+  directly set, instead of per ``client.get``.
 
 Version 0.11.2
 --------------
